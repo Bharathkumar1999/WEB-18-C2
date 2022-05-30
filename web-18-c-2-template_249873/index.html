@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+      #navbar{
+        display:flex;
+        justify-content: space-evenly;
+        margin-left: 800px;
+        margin-bottom: 30px;
+      }
+
+      #menu{
+            display:grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            gap:20px;
+            height:100%;
+            width:100%;
+      }
+      .coffee>img{
+        height: 50%;;
+        width:50%;
+      }
+
+      .coffee{
+        margin-bottom: -30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="navbar">
+      <!--Add navbar divs here-->
+      <div>login</div>
+      <div>Sign-Up</div>
+      <div>Items</div>
+      
+      <!-- Link to bucket.html -->
+      <a id="go_to_bucket" href="bucket.html">Bucket</a>
+      
+
+      <div id="coffee_count">0
+        <!--Show total number of coffee added to bucket here, do not add anything only Total count. Not even "Count - 5" but like this "5" -->
+      </div>
+    </div>
+
+    <div id="menu">
+      <!--Show coffee list here in grid format-->
+      <!-- add an add to bucket button to each item, give it HTML id as 'add_to_bucket' -->
+      <div class="coffee">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/640px-A_small_cup_of_coffee.JPG" alt="">
+        <p>Black</p>
+        <p>655</p>
+        <button id="add_to_bucket" onclick="addToCart()">Add to Bucket</button>
+      </div>
+      <div class="coffee">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Latte_at_Doppio_Ristretto_Chiang_Mai_01.jpg/509px-Latte_at_Doppio_Ristretto_Chiang_Mai_01.jpg" alt="">
+        <p>Latte</p>
+        <p>655</p>
+        <button id="add_to_bucket" onclick="addToCart()">Add to Bucket</button>
+
+      </div>
+      <div class="coffee">
+        <img src="https://images.unsplash.com/photo-1521302080334-4bebac2763a6?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29mZmVlfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=800" alt="">
+        <p>Cappuccino</p>
+        <p>655</p>
+        <button id="add_to_bucket" onclick="addToCart()">Add to Bucket</button>
+
+      </div>
+      <div class="coffee">
+        <img src="https://images.unsplash.com/photo-1521302080334-4bebac2763a6?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29mZmVlfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=800" alt="">
+        <p>Americano</p>
+        <p>655</p>
+        <button id="add_to_bucket" onclick="addToCart()">Add to Bucket</button>
+
+      </div>
+      <div class="coffee">
+        <img src="https://images.unsplash.com/photo-1535403396060-dd9daec50b74?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y29mZmVlfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=800" alt="">
+        <p>Expresso</p>
+        <p>655</p>
+        <button id="add_to_bucket" onclick="addToCart()">Add to Bucket</button>
+
+      </div>
+      <div class="coffee">
+        <img src="https://images.unsplash.com/photo-1502471602546-17554aac1160?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y29mZmVlfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="">
+        <p>Doppio</p>
+        <p>655</p>
+        <button id="add_to_bucket" onclick="addToCart()">Add to Bucket</button>
+
+      </div>
+      <div class="coffee">
+        <img src="https://images.unsplash.com/photo-1524770471852-3a23be3abdb3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNvZmZlZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=800&q=60" alt="">
+        <p>Cotado</p>
+        <p>655</p>
+        <button id="add_to_bucket" onclick="addToCart()">Add to Bucket</button>
+
+      </div>
+      <div class="coffee">
+        <img src="https://images.unsplash.com/photo-1535403318185-d612e6b1dc3c?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGNvZmZlZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=800" alt="">
+        <p>Red Eye</p>
+        <p>655</p>
+        <button id="add_to_bucket" onclick="addToCart()">Add to Bucket</button>
+
+      </div>
+      <div class="coffee">
+        <img src="https://images.unsplash.com/photo-1529088148495-2d9f231db829?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGNvZmZlZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=800&q=60" alt="">
+        <p>Galao</p>
+        <p>655</p>
+        <button id="add_to_bucket" onclick="addToCart()">Add to Bucket</button>
+
+      </div>
+      <div class="coffee">
+        <img src="https://images.unsplash.com/photo-1623859763838-a304cbfd4901?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNvZmZlZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=800&q=60" alt="">
+        <p>Lungo</p>
+        <p>655</p>
+        <button id="add_to_bucket" onclick="addToCart()">Add to Bucket</button>
+
+      </div>
+      <div class="coffee">
+        <img src="https://images.unsplash.com/photo-1514664902876-824dfe29bb64?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGNvZmZlZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=800&q=60" alt="">
+        <p>Macchiato</p>
+        <p>655</p>
+        <button id="add_to_bucket" onclick="addToCart()">Add to Bucket</button>
+
+      </div>
+      <div class="coffee">
+        <img src="https://images.unsplash.com/photo-1527683040093-3a2b80ed1592?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGNvZmZlZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=800" alt="">
+        <p>Macho</p>
+        <p>655</p>
+        <button id="add_to_bucket" onclick="addToCart()">Add to Bucket</button>
+
+      </div>
+      <div class="coffee">
+        <img src="https://images.unsplash.com/photo-1515283709260-ee29296f1534?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGNvZmZlZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=800&q=60" alt="">
+        <p>Ristretto</p>
+        <p>655</p>
+        <button id="add_to_bucket" onclick="addToCart()">Add to Bucket</button>
+
+      </div>
+      <div class="coffee">
+        <img src="https://images.unsplash.com/photo-1517559911230-415def7b667f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fGNvZmZlZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=800&q=60" alt="">
+        <p>Flat White</p>
+        <p>655</p>
+        <button id="add_to_bucket" onclick="addToCart()">Add to Bucket</button>
+
+      </div>
+      <div class="coffee">
+        <img src="https://images.unsplash.com/photo-1489672155498-1331365e0dcd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fGNvZmZlZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=800&q=60" alt="">
+        <p>Café au Lait</p>
+        <p>655</p>
+        <button id="add_to_bucket" onclick="addToCart()">Add to Bucket</button>
+
+      </div>
+      <div class="coffee">
+        <img src="https://images.unsplash.com/photo-1520949044152-74b54c164c31?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fGNvZmZlZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=800" alt="">
+        <p>Irish</p>
+        <p>655</p>
+        <button id="add_to_bucket" onclick="addToCart()">Add to Bucket</button>
+
+      </div>
+      <div class="coffee">
+        <img src="https://images.unsplash.com/photo-1559001724-fbad036dbc9e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fGNvZmZlZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=800" alt="">
+        <p>Guayoyo</p>
+        <p>655</p>
+        <button id="add_to_bucket" onclick="addToCart()">Add to Bucket</button>
+
+      </div>
+      <div class="coffee">
+        <img src="https://images.unsplash.com/photo-1598811465492-4138d1f4fbee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDJ8fGNvZmZlZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=800&q=60" alt="">
+        <p>Cortadito</p>
+        <p>655</p>
+        <button id="add_to_bucket" onclick="addToCart()">Add to Bucket</button>
+
+      </div>
+      <div class="coffee">
+        <img src="https://images.unsplash.com/photo-1519831802596-6aadd85ff671?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDd8fGNvZmZlZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=800" alt="">
+        <p>Aguapanela</p>
+        <p>655</p>
+        <button id="add_to_bucket" onclick="addToCart()">Add to Bucket</button>
+
+      </div>
+    </div>
+
+  </body>
+</html>
+<script src="index.js"></script>
